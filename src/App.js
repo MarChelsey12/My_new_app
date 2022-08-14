@@ -7,13 +7,13 @@ import Error from './components/Error';
 import NavBar from './components/NavBar';
 
 import { CancelToken } from 'apisauce';
-// import { getUser} from './api/apiBasicAuth';
+import { getLogin } from './api/apiLogin';
+//import { postUser } from './api/apiUser';
 
 const handleClick = async () =>{
-  const source = CancelToken.source()
-  // const responseObject =  await getUser('martinezchelsey12@gmail.com', '123', source.token);
-  // console.log(responseObject);
-  console.log("clicked");
+  const source = CancelToken.source();
+  const responseObject =  await getLogin({email:'martinezchelsey12@gmail.com', password:'123'}, source.token);
+  console.log(responseObject);
 }
 
 function App() {
