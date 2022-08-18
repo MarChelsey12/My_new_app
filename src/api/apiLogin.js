@@ -1,6 +1,6 @@
 import apiClient from './clientBasicAuth';
 
-const endpoint = 'login';
+const endpoint = '/login';
 
 export const getLogin = async (email, password, cancelToken) =>{
     let error;
@@ -19,6 +19,6 @@ export const getLogin = async (email, password, cancelToken) =>{
 
     return{
         error, 
-        user
+        user,
     }
 }

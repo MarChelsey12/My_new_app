@@ -12,9 +12,10 @@ import { getLogin } from './api/apiLogin';
 
 const handleClick = async () =>{
   const source = CancelToken.source();
-  const responseObject =  await getLogin({email:'martinezchelsey12@gmail.com', password:'123'}, source.token);
+  const responseObject =  await getLogin( source.token);
   console.log(responseObject);
 }
+
 
 function App() {
   return (
