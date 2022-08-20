@@ -7,15 +7,18 @@ import Error from './components/Error';
 import NavBar from './components/NavBar';
 
 import { CancelToken } from 'apisauce';
-import { getLogin } from './api/apiLogin';
+//import { getLogin } from './api/apiLogin';
 //import { postUser } from './api/apiUser';
+//import { putUser } from './api/apiUser';
+import { deleteUser } from './api/apiUser';
 
 const handleClick = async () =>{
   const source = CancelToken.source();
-  const responseObject =  await getLogin( source.token);
+  const responseObject =  await deleteUser( source.token);
   console.log(responseObject);
 }
 
+//'Ev9MhrzpJxi4gUUbbByOAGd0fSVfWZ5iS0NF-8u3kqQ', {username:'test', email:'test@test.com', password:'abc'}
 
 function App() {
   return (
